@@ -18,8 +18,8 @@ class ProfileActivity : AppCompatActivity () {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
         sharedPref = this.getSharedPreferences(PREF_NAME, PRIVATE_MODE)
-        user_profile_name.setText(sharedPref!!.getString("user-name",""))
-        user_profile_email.setText(sharedPref!!.getString("user-email",""))
+        user_profile_name.setText(sharedPref?.let{it.getString("user-name","")})
+        user_profile_email.setText(sharedPref?.let{it.getString("user-email","")})
 
     }
 }
