@@ -21,10 +21,10 @@ class ProfileActivity : AppCompatActivity () {
         setContentView(R.layout.activity_profile)
         sharedPref = this.getSharedPreferences(PREF_NAME, PRIVATE_MODE)
         user_profile_name.setText(sharedPref?.let{
-            it.getString("user-name","")}
+            it.getString(KEY_username,"")}
         )
         user_profile_email.setText(sharedPref?.let{
-            it.getString("user-email","")}
+            it.getString(KEY_email,"")}
         )
 
     }
